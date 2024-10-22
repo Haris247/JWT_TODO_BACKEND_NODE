@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add task</h1>
+    <form action="/api/v1/task/create" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Please Enter Name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Please Enter Email">
+        </div>
+        <div>
+            <label for="task">Task:</label>
+            <textarea name="task" id="task" required placeholder="Please Enter the task"></textarea>
+        </div>
+        <input type="submit" value="submit">
+       </form>
+</body>
+</html>

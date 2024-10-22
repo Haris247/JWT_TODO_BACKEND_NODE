@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+      <form >
+        <input type="text" name="search">
+        <input type="submit" value="Submit">
+      </form>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Task</th>
+        <th>Controls</th>
+      </tr
+      <% if (data) { %>
+        <% for( let index = 0; index < data.length; index++ ) { %>
+            <tr>
+                <td><%= data[index].name %></td>
+                <td><%= data[index].email %></td>
+                <td><%= data[index].task %></td>
+                <td><button><a href="/update?id=<%= data[index]._id %>">Edit</a></button><button><a href="/api/v1/task/delete/<%= data[index]._id %>">Delete</a></button></td>
+              </tr>
+         <% } %>
+        <% } %>
+      </table>
+      <a href="/add">Add Task</a>
+      <a href="/api/v1/user/logout">Logout</a>
+</body>
+</html>

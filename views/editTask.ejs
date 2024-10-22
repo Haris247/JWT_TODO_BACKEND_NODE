@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit task</h1>
+    <form action="/api/v1/task/update/<%= data._id %>" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= data.name %>" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= data.email %>" required>
+        </div>
+        <div>
+            <label for="task">Task:</label>
+             <textarea name="task" id="task" required placeholder="<%= data.task %>"></textarea>
+        </div>
+        <input type="submit" value="submit">
+       </form>
+</body>
+</html>
